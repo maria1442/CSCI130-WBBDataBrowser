@@ -1,0 +1,292 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto-Medium", Helvetica;
+    
+}
+
+/* The Modal (background) */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1; /* Sit on top */
+    left: 0;  
+    animation-duration: 0.6s;
+    top: 0;
+    width:20%; /* Full width */
+    height:55%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-overlay {
+    background-color: #fefefe;
+    margin-left: 25%;
+    margin:5%; /* 15% from the top and centered */
+    border: 3px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+  
+
+}
+
+
+
+#infoContainer input {
+
+    height: 20px; /* Adjust the height as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    padding:  1px; /* Optional: Adds some padding inside the input box */
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+h1 {
+    background-color: #fa4d00;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+border-bottom: 2px solid #fa4d00;
+  background-color: #ffffff;
+  height:90px;
+}
+h3 {
+  font-size: 30px;
+  color: #fa4d00;;
+}
+
+.logo-container img {
+    width: 100x;
+    height:80px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    padding: 12px;
+  }
+
+.navButton {
+    background-color: #fa4d00; /* Red background */
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navButton:hover {
+    background-color: #e60000; /* Darker red on hover */
+}
+
+/* Clear floats after the buttons */
+#navbar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style adjustments for mobile screens */
+@media screen and (max-width: 600px) {
+    .navButton {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+table {
+    width: 60%;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+.inputs[readonly] {
+    width: 60%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+}
+
+.inputs:not([readonly]) {
+  background-color: #f0f0f0;
+  width: 60%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+.player-figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playerImage {
+    margin: 0 20px; /* Adjust space around the image as needed */
+}
+
+
+
+
+
+#playerImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  margin: 20px auto;
+  max-height: 500px;
+  min-width: 700px;
+  min-height: 450px;
+  margin: 0 20px; /* Adjust space around the image as needed */
+}
+
+
+
+#playerImage img{
+  /* Adjust as needed */
+    object-fit:contain;
+     margin-top: 20px; /* or 'cover', depending on your need */
+}
+
+
+
+
+.dbButtons, .navBtns {
+    background-color: #fa4d00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.dbButtons:hover, .navBtns:hover {
+    background-color: #e60000;
+}
+
+#buttonContainers {
+    text-align: center;
+}
+
+#insertModal {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+#insertModal h3 {
+    color: #fa4d00;
+}
+
+#insertModal button {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+
+/* Additional styles for spacing and alignment */
+.table {
+    align-items: center;
+    margin: 20px 0;
+}
+
+.dataRow {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+
+}
+
+.section {
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 20px 0;
+}
+
+/* Style for file upload section */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+form li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+form input[type="file"] {
+    padding: 10px;
+}
+
+form input[type="submit"] {
+    background-color: #fa4d00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e60000;
+}
+#infoContainer label {
+    font-size: 18px; /* Adjust as needed */
+}
+
+#infoContainer td {
+    padding: 10px; /* Adjust as needed */
+}
+
+#infoContainer {
+    width: auto; /* Full width or adjust as needed */
+    display: flex;
+    justify-content: center; /* This will center the table horizontally */
+}
+
+#infoContainer table {
+    margin: auto; /* This centers the table within the flex container */
+    /* If the table should not take the full width */
+    width: auto; /* Or set a specific width like width: 50%; */
+}
+
+
+

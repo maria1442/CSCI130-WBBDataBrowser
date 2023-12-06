@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>WNBA Categories</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="fetchData()">
+
+
+    <nav id="navbar">
+        <div class="logo-container">
+            <img class="element"  src="uploads/bb.png" alt="BBLogo" >
+        </div>
+           <button class="navButton" onclick="openInsertModal()">Insert New Player</button>
+           <button class="navButton" onclick="sortByTitle()">Sort by Player Name</button>
+           <button class="navButton" onclick="sortDefault()">Sort Default</button>
+           <button class="navButton" id="createDB" type="button" onclick="createDB()">Create DB</button>
+           <button class="navButton" id="editButton" type="button" onclick = "fetchData()">Display Data</button>
+             <h3 id="currentIndex"> 0 out of 0 </h3>
+       </nav>
+
+
+
+       <section>
+        <div id="playerfigure" class="player-figure">
+            <button class="navBtns" onclick="goToFirst()">Go To First</button>
+            <button class="navBtns" onclick="previous()">Previous</button>
+            <img id="playerImage" src="" alt="Player Image">
+            <button class="navBtns" onclick="next()">Next</button>
+            <button class="navBtns" onclick="goToLast()">Go To Last</button>
+        </div>
+    </section>
+    
+
+
+    <div id = "buttonContainers">
+    <button class="dbButtons" id="editButton" type="button" onclick="edit()">Edit</button>
+    <button class="dbButtons" id="saveButton" type="button" onclick="saveEdit()" style="display:none;">Save Edit</button>
+    <button class="dbButtons" id="createDB" type="button" onclick="deleteObj()">Delete</button>
+</div>
+
+<!--Table Information -->
+
+
+<div id="infoContainer">
+    <table>
+        <tr class="dataRow">
+            <td><label for="title">Player Name:</label></td>
+            <td><input type="text" id="title" name="title" value="" class="inputs" readonly /></td>
+        </tr>
+        <tr>
+            <td><label for="number">Player Number:</label></td>
+            <td><input id="number" name="number" type="text" class="inputs" readonly /></td>
+        </tr>
+        <tr>
+            <td><label for="year">Award Year:</label></td>
+            <td><input id="year" name="year" type="text" class="inputs" readonly /></td>
+        </tr>
+        <tr>
+            <td><label for="team">Team:</label></td>
+            <td><input id="team" name="team" type="text" class="inputs" readonly /></td>
+        </tr>
+        <tr>
+            <td><label for="position">Position:</label></td>
+            <td><input id="position" name="position" type="text" class="inputs" readonly /></td>
+        </tr>
+        <tr>
+            <td><label for="newImgURL" id="newImgURLtxt" style="display:none">Image URL:</label></td>
+            <td><input id="newImgURL" name="newImgURL" type="text" class="inputs" style="display:none" readonly /></td>
+        </tr>
+
+        <!-- Optional: Display the image itself -->
+        <tr id="imageRow" style="display:none">
+            <td>Image:</td>
+            <td><img id="playerImage" src="" alt="Player Image" style="width:100px;" /></td>
+        </tr>
+    </table>
+  </div>
+
+  <form action="uploadfile.php" method="post" enctype="multipart/form-data">
+    <li><input type="file" name="fileup" id="fileup"></li>
+    <li><input type="submit" value="Upload Image" name="submit"></li>
+</form>
+    
+
+
+    <br><br>
+
+    <div id="insertModalOverlay">
+    <div id="insertModal" class="modal-overlay" style="display:none;">
+    <h3>Insert New Player Details Here: </h3>
+    <table>
+        <tr>
+            <td><label for="newTitle">Player:</label></td>
+            <td><input type="text" id="newTitle" name="title"></td>
+        </tr>
+        <tr>
+            <td><label for="newYear">Year:</label></td>
+            <td><input type="number" id="newYear" name="year"></td>
+        </tr>
+        <tr>
+            <td><label for="newteam">Team:</label></td>
+            <td><input type="text" id="newteam" name="team"></td>
+        </tr>
+        <tr>
+            <td><label>Position:</label></td>
+            <td>
+                <input id="positionPG" name="position" type="radio" class="inputs" value="PG" />
+                <label for="positionPG">PG</label>
+                
+                <input id="positionG" name="position" type="radio" class="inputs" value="G" />
+                <label for="positionG">G</label>
+                
+                <input id="positionF" name="position" type="radio" class="inputs" value="F" />
+                <label for="positionF">F</label>
+                
+                <input id="positionC" name="position" type="radio" class="inputs" value="C" />
+                <label for="positionC">C</label>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><label for="newnumber">Number:</label></td>
+            <td><input type="number" id="newnumber" name="number"></td>
+        </tr>
+        <tr>
+            <td><label for="newImg">Insert Image URL:</label></td>
+            <td><input type="text" id="newImg" name="img"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="insertData()">Insert Data</button>
+                <button type="button" onclick="closeInsertModal()">Cancel</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

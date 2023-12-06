@@ -1,0 +1,43 @@
+[
+    {
+      "name": "Breanna Stewart",
+      "year": 2023,
+      "team": "New York Liberty",
+      "position": "F",
+      "number": 30,
+      "img": "uploads/brianna.jpg"
+    },
+    {
+      "name": "Aja Wilson",
+      "year": 2022,
+      "team": "Las Vegas Aces",
+      "position": "F",
+      "number": 22,
+      "img": "uploads/aja.png"
+    },
+    {
+      "name": "Jonquel Jones",
+      "year": 2021,
+      "team": "Connecticut Sun",
+      "position": "F",
+      "number": 35,
+      "img": "uploads/Jonquel-Jones.png"
+    },
+    {
+      "name": "Aja Wilson",
+      "year": 2020,
+      "team": "Las Vegas Aces",
+      "position": "F",
+      "number": 22,
+      "img": "uploads/aja.png"
+    },
+    {
+      "name": "Elena Delle Donne",
+      "year": 2019,
+      "team": "Washington Mystics",
+      "position": "G",
+      "number": 11,
+      "img": "uploads/dele.png"
+    }
+  ]
+  
