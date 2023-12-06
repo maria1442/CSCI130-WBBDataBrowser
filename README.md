@@ -3,7 +3,7 @@
 
 ## Overview
 
-This is the WNBA Data Browser! It was developed as part of the CSCI 130 - Web Programming course at Fresno State University. This project is designed to showcase a comprehensive collection of WNBA MVP (Most Valuable Player) awarded players. 
+This is the WNBA Data Browser! It was developed as part of the CSCI 130 - Web Programming course at Fresno State University. This project is designed to showcase a comprehensive collection of WNBA MVP (Most Valuable Player) awarded players - focused on CRUD (Create, Read, Update, Delete) operations. 
 
 ## Files Structure
 
